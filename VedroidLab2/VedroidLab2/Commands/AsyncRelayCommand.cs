@@ -27,6 +27,7 @@ namespace VedroidLab2.Commands {
                     await this.execute_();
                 }
                 finally {
+                    // TODO: add debuging this
                     this.IsExecuting = false;
                 }
             }
