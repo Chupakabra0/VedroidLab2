@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:VedroidLab2.ViewModels;assembly=VedroidLab2"
+             x:Class="VedroidLab2.Pages.MainPage.MainPage">
+
+    <ContentPage.BindingContext>
+        <viewModels:MainPageViewModel></viewModels:MainPageViewModel>
+    </ContentPage.BindingContext>
+
+    <StackLayout Orientation="Vertical">
+
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+
+                <Label Text="Моя первая проба пера!" HorizontalTextAlignment="Center"
+                       TextColor="White" FontSize="28" FontAttributes="Bold"
+                       Padding="5">
+                </Label>
+
+                <Label Text="Введи своё имя:" HorizontalTextAlignment="Center"
+                       TextColor="White" FontSize="24" FontAttributes="None"
+                       Padding="5">
+                </Label>
+
+            </StackLayout>
+        </Frame>
+
+
+        <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+            <Entry Text="{Binding Path=MainEntryText, Mode=TwoWay}"
+                    HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"
+                    FontSize="20"
+                    Placeholder="{Binding Path=MainEntryPlaceholder, Mode=TwoWay}">
+            </Entry>
+        </StackLayout>
+
+        <StackLayout Orientation="Vertical" VerticalOptions="EndAndExpand" Padding="24">
+            <Button Text="Нажми меня!" Command="{Binding MainButtonCommand}"></Button>
+        </StackLayout>
+
+    </StackLayout>
+</ContentPage>
