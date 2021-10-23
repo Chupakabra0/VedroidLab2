@@ -1,12 +1,13 @@
-﻿using System;
-using System.Windows.Input;
+﻿using System.Windows.Input;
 using GalaSoft.MvvmLight.Views;
 using VedroidLab2.Commands;
 using VedroidLab2.Helpers.DialogService;
 
 namespace VedroidLab2.ViewModels {
     class MainPageViewModel : BaseViewModel {
-        public string Title         => "Моя первая проба пера";
+        public string Title                => "Моя первая проба пера";
+        public string MainEntryPlaceholder => "Например, Саша";
+
         public string MainEntryText { get; set; } = string.Empty;
 
         public ICommand MainButtonCommand =>
